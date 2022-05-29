@@ -1,0 +1,20 @@
+.slideContainer{
+    height: 100vh;
+    display: flex;
+    padding: 0.4rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.picContainer{
+    padding: 0rem;
+    -webkit-box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
+}
+.pic{
+    width: 100%;
+    max-width: 500px;
+    display: block;
+}
