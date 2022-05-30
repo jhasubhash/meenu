@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useSpringCarousel } from 'react-spring-carousel'
 import './ViewPager.css'
+import ReactCardFlip from 'react-card-flip';
 
 import a from '../images/a.png';
 import b from '../images/b.png';
@@ -12,12 +13,29 @@ const pages = [
   c
 ]
 
+const comments = [
+    a,
+    b,
+    c
+  ]
+
 function DiplayCard(prop){
-    return <div className='slideContainer'>
-        <div className='picContainer'>
-            <img src={prop.url} className={'pic'}/>
+    const [flipped, setFlipped] = useState(false);
+    const flipSpeed = 1;
+    let handleFlip = (e) => {
+        e.preventDefault();
+        setFlipped(!flipped);
+    }
+    return <div className='slideContainer' onClick={handleFlip}>
+            <ReactCardFlip isFlipped={flipped} flipSpeedBackToFront={flipSpeed} flipSpeedFrontToBack={flipSpeed}>
+            <div className='picContainer'>
+                <img src={prop.front} className={'pic'}/>
+            </div>
+            <div className='picContainer'>
+                <img src={prop.back} className={'pic'}/>
+            </div>
+            </ReactCardFlip>
         </div>
-    </div>
 }
 
 export default function ViewPager() {
@@ -27,15 +45,15 @@ export default function ViewPager() {
         items: [
           {
             id: 'item-1',
-            renderItem: <DiplayCard url={pages[0]}/>,
+            renderItem: <DiplayCard front={pages[0]} back={comments[0]}/>,
           },
           {
             id: 'item-2',
-            renderItem: <DiplayCard url={pages[1]}/>,
+            renderItem: <DiplayCard front={pages[1]} back={comments[1]}/>,
           },
           {
             id: 'item-2',
-            renderItem: <DiplayCard url={pages[2]}/>,
+            renderItem: <DiplayCard front={pages[2]} back={comments[2]}/>,
           },
         ],
       })
