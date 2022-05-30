@@ -13,18 +13,17 @@ const pages = [
 ]
 
 function DiplayCard(prop){
-    return <>
-    <div className='slideContainer'>
+    return <div className='slideContainer'>
         <div className='picContainer'>
             <img src={prop.url} className={'pic'}/>
         </div>
     </div>
-    </>
 }
 
 export default function ViewPager() {
 
     const { carouselFragment, slideToPrevItem, slideToNextItem } = useSpringCarousel({
+        withLoop: true,
         items: [
           {
             id: 'item-1',
@@ -42,6 +41,6 @@ export default function ViewPager() {
       })
       
     return <>
-    <div>{carouselFragment}</div>
+        {carouselFragment}
     </>
 }
