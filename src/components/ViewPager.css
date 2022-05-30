@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    background-color: antiquewhite;
 }
 
 .picContainer{
@@ -12,6 +13,7 @@
     -webkit-box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
+    background-color: white;
 }
 .pic{
     width: 100%;
