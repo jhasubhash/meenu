@@ -2,10 +2,14 @@ import React, { useRef } from 'react'
 import { useSpringCarousel } from 'react-spring-carousel'
 import './ViewPager.css'
 
+import a from '../images/a.png';
+import b from '../images/b.png';
+import c from '../images/c.png';
+
 const pages = [
-  'https://images.pexels.com/photos/62689/pexels-photo-62689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  'https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  'https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+  a,
+  b,
+  c
 ]
 
 function DiplayCard(prop){
