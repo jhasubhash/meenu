@@ -6,17 +6,20 @@ import ReactCardFlip from 'react-card-flip';
 import a from '../images/a.png';
 import b from '../images/b.png';
 import c from '../images/c.png';
+import d from '../images/d.png';
 
 const pages = [
   a,
   b,
-  c
+  c,
+  d
 ]
 
 const comments = [
     a,
     b,
-    c
+    c,
+    d
   ]
 
 function DiplayCard(prop){
@@ -26,12 +29,12 @@ function DiplayCard(prop){
         e.preventDefault();
         setFlipped(!flipped);
     }
-    return <div className='slideContainer' onClick={handleFlip}>
+    return <div className='slideContainer' >
             <ReactCardFlip isFlipped={flipped} flipSpeedBackToFront={flipSpeed} flipSpeedFrontToBack={flipSpeed}>
-            <div className='picContainer'>
+            <div className='picContainer' onClick={handleFlip}>
                 <img src={prop.front} className={'pic'}/>
             </div>
-            <div className='picContainer'>
+            <div className='picContainer' onClick={handleFlip}>
                 <img src={prop.back} className={'pic'}/>
             </div>
             </ReactCardFlip>
@@ -52,8 +55,12 @@ export default function ViewPager() {
             renderItem: <DiplayCard front={pages[1]} back={comments[1]}/>,
           },
           {
-            id: 'item-2',
+            id: 'item-3',
             renderItem: <DiplayCard front={pages[2]} back={comments[2]}/>,
+          },
+          {
+            id: 'item-4',
+            renderItem: <DiplayCard front={pages[3]} back={comments[3]}/>,
           },
         ],
       })
