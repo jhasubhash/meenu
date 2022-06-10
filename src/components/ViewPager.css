@@ -1,12 +1,10 @@
 .slideContainer{
-    height: 100%;
     width: 100%;
     display: flex;
     padding: 1rem;
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    background-color: antiquewhite;
 }
 
 .picContainer{
@@ -24,4 +22,12 @@
 
 #root > div > div > div {
     left: 0px !important;;
+}
+
+.backAnim{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    height: 45%;
+    width: 100vw;
 }
