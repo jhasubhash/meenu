@@ -2,12 +2,6 @@ body,
 html {
   position: fixed;
   background-color: #faebd7;
-  background-color: #faebd7;
-  background-color: #fdefdb;
-  opacity: 1;
-  background-image:  repeating-linear-gradient(45deg, #f3dddd 25%, transparent 25%, transparent 75%, #f3dddd 75%, #f3dddd), repeating-linear-gradient(45deg, #f3dddd 25%, #fdefdb 25%, #fdefdb 75%, #f3dddd 75%, #f3dddd);
-  background-position: 0 0, 4px 4px;
-  background-size: 8px 8px;
 }
 
 body {
